@@ -12,6 +12,6 @@
     <dubbo:consumer timeout="60000"/>
 
     <!-- dubbo服务订阅 -->
-    <dubbo:reference interface="com.zhang.dubbo.iface.IUserInfo" id="userInfo"/>
+    <dubbo:reference interface="com.zhang.dubbo.iface.IUserInfo" id="userInfo" version="1.0.0"/>
 
 </beans>
