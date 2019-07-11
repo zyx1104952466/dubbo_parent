@@ -1,4 +1,4 @@
-package com.zhang.dubbo.bean;
+package com.zhang.dubbo.entity;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @Date 2019/5/24 9:59
  * @Version 1.0
  **/
-public class UserInfoBean implements Serializable {
+public class UserInfo implements Serializable {
 
     String id;
     String name;

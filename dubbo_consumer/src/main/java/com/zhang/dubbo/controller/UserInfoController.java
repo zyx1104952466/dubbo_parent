@@ -1,12 +1,14 @@
 package com.zhang.dubbo.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zhang.dubbo.action.UserInfoAction;
-import com.zhang.dubbo.bean.UserInfoBean;
+import com.zhang.dubbo.entity.UserInfo;
 import com.zhang.dubbo.iface.IUserInfo;
+import com.zhang.dubbo.utils.Slf4jLogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @ClassName UserInfoController
@@ -18,16 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserInfoController {
 
-    @Reference(version = "1.0.0")
+    private static AtomicInteger acount = new AtomicInteger(0);
+
+    @Autowired
     IUserInfo userInfo;
 
     @RequestMapping(value = "getUserInfo")
-    public String getUserInfo() {
-        return userInfo.getUserInfo();
+    public UserInfo getUserInfo(String id) {
+        return userInfo.getUserInfo(id);
     }
 
     @RequestMapping(value = "saveUserInfo")
-    public void saveUserInfo(UserInfoBean bean) {
+    public void saveUserInfo(UserInfo bean) {
+        Slf4jLogUtils.MSG.info("当前请求：" + Thread.currentThread().getName());
         userInfo.saveUserInfo(bean);
     }
 }

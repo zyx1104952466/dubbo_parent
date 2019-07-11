@@ -15,6 +15,7 @@ public class ProviderApplication {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String("control-core.xml"));
         context.start();
+        System.out.println("启动完毕");
         try {
             System.in.read();
         } catch (IOException e) {

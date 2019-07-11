@@ -5,8 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
     <import resource="applicationContext.xml"/>
-    <import resource="context-server.xml"/>
-    <import resource="context-service.xml"/>
-    <import resource="context-dao.xml"/>
-    <import resource="dubbo_provicer.xml"/>
+    <import resource="conf/db/context-service.xml"/>
+    <import resource="conf/db/context-dao.xml"/>
+    <import resource="conf/dubbo/dubbo_provicer.xml"/>
 </beans>

@@ -1,6 +1,7 @@
 package com.zhang.dubbo.service;
 
-import com.zhang.dubbo.dao.UserInfoDao;
+import com.zhang.dubbo.dao.IUserInfoDao;
+import com.zhang.dubbo.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -13,13 +14,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class UserInfoService {
 
     @Autowired
-    UserInfoDao userInfoDao;
+    IUserInfoDao userInfoDao;
 
-    public String getUserInfo() {
-        return userInfoDao.getUserInfo();
+    public UserInfo getUserInfo(String id) {
+        return userInfoDao.getById(id);
     }
 
-    public void saveUserInfo() {
-        userInfoDao.saveUserInfo();
+    public void saveUserInfo(UserInfo userInfo) {
+        userInfoDao.insertUserInfo(userInfo);
     }
 }

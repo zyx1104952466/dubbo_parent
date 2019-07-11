@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhang.dubbo.mapper.IUserInfoMapper">
+
+    <parameterMap type="com.zhang.dubbo.bean.UserInfoBean" id="parameterMapUserInfo">
+        <parameter property="id"/>
+        <parameter property="name"/>
+    </parameterMap>
+
+    <resultMap type="com.zhang.dubbo.bean.UserInfoBean" id="resultMapUserInfo">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <insert id="insertUserInfo" parameterMap="parameterMapUserInfo">
+        INSERT INTO user_info(id,name)
+        VALUES(?,?)
+    </insert>
+
+    <select id="countAll" resultType="int">
+      select count(*) c from user_info;
+    </select>
+    <select id="getAllUserInfo" resultMap="resultMapUserInfo">
+      SELECT * FROM user_info
+    </select>
+    <select id="getById" parameterType="String" resultMap="resultMapUserInfo">
+        SELECT * FROM user_info
+        WHERE id=#{value}
+    </select>
+
+    <delete id="deleteUserInfo" parameterType="String">
+        DELETE FROM user
+        WHERE id=#{value}
+    </delete>
+
+    <update id="updateUserInfo" parameterType="java.util.Map">
+        UPDATE user_info
+        SET name=#{name}
+        WHERE id=#{id}
+    </update>
+</mapper>

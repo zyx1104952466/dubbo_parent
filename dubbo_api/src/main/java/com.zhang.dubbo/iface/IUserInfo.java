@@ -1,6 +1,6 @@
 package com.zhang.dubbo.iface;
 
-import com.zhang.dubbo.bean.UserInfoBean;
+import com.zhang.dubbo.entity.UserInfo;
 
 /**
  * @ClassName IUserInfo
@@ -11,7 +11,7 @@ import com.zhang.dubbo.bean.UserInfoBean;
  **/
 public interface IUserInfo {
 
-    public String getUserInfo();
+    public UserInfo getUserInfo(String id);
 
-    public void saveUserInfo(UserInfoBean bean);
+    public void saveUserInfo(UserInfo userInfo);
 }

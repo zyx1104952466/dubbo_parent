@@ -1,6 +1,7 @@
 package com;
 
-import com.zhang.dubbo.action.UserInfoAction;
+import com.zhang.dubbo.controller.UserInfoController;
+import com.zhang.dubbo.entity.UserInfo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -16,8 +17,11 @@ public class UserInfoActionTest {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String("control-core.xml"));
-        UserInfoAction userInfoAction = context.getBean(UserInfoAction.class);
-        System.out.println(userInfoAction.getUserInfo());
+        UserInfoController userInfoController = context.getBean(UserInfoController.class);
+        UserInfo userInfo = new UserInfo();
+        userInfo.setId("1");
+        userInfo.setName("zhangyux");
+        userInfoController.saveUserInfo(userInfo);
         try {
             System.in.read();
         } catch (IOException e) {
