@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhang.dubbo.mapper.IUserInfoMapper">
 
-    <parameterMap type="com.zhang.dubbo.bean.UserInfoBean" id="parameterMapUserInfo">
+    <parameterMap type="com.zhang.dubbo.entity.UserInfo" id="parameterMapUserInfo">
         <parameter property="id"/>
         <parameter property="name"/>
     </parameterMap>
 
-    <resultMap type="com.zhang.dubbo.bean.UserInfoBean" id="resultMapUserInfo">
+    <resultMap type="com.zhang.dubbo.entity.UserInfo" id="resultMapUserInfo">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
     </resultMap>

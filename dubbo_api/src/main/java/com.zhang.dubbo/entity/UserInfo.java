@@ -3,7 +3,7 @@ package com.zhang.dubbo.entity;
 import java.io.Serializable;
 
 /**
- * @ClassName UserInfoBean
+ * @ClassName UserInfo
  * @Description TODO
  * @Author zhangyux
  * @Date 2019/5/24 9:59
@@ -32,7 +32,7 @@ public class UserInfo implements Serializable {
 
     @Override
     public String toString() {
-        return "UserInfoBean{" +
+        return "UserInfo{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 '}';

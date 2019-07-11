@@ -1,6 +1,5 @@
 package com.zhang.dubbo.dao;
 
-import com.zhang.dubbo.bean.UserInfoBean;
 import com.zhang.dubbo.entity.UserInfo;
 
 import java.util.List;

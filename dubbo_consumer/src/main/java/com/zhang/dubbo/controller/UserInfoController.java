@@ -22,7 +22,7 @@ public class UserInfoController {
 
     private static AtomicInteger acount = new AtomicInteger(0);
 
-    @Autowired
+    @Reference
     IUserInfo userInfo;
 
     @RequestMapping(value = "getUserInfo")

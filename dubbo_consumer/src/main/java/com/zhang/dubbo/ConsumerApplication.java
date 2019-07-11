@@ -1,6 +1,7 @@
 package com.zhang.dubbo;
 
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import com.zhang.dubbo.utils.Slf4jLogUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -16,6 +17,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ConsumerApplication {
 
     public static void main(String[] args) {
+        Slf4jLogUtils.MSG.info("启动开始");
         SpringApplication.run(ConsumerApplication.class, args);
+        Slf4jLogUtils.MSG.info("启动完成");
     }
 }
