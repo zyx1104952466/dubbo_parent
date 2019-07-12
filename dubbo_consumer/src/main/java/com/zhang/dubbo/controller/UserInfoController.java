@@ -27,7 +27,10 @@ public class UserInfoController {
 
     @RequestMapping(value = "getUserInfo")
     public UserInfo getUserInfo(String id) {
-        return userInfo.getUserInfo(id);
+        Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理开始");
+        UserInfo bean = userInfo.getUserInfo(id);
+        Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理结束");
+        return  bean;
     }
 
     @RequestMapping(value = "saveUserInfo")

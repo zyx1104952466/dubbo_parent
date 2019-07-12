@@ -1,5 +1,8 @@
 package com.zhang.dubbo;
 
+import com.zhang.dubbo.utils.Slf4jLogUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -12,10 +15,11 @@ import java.io.IOException;
  * @Version 1.0
  **/
 public class ProviderApplication {
+
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String("control-core.xml"));
         context.start();
-        System.out.println("启动完毕");
+        Slf4jLogUtils.MSG.info("Provider started");
         try {
             System.in.read();
         } catch (IOException e) {

@@ -3,6 +3,7 @@ package com.zhang.dubbo.remoteserver;
 import com.zhang.dubbo.entity.UserInfo;
 import com.zhang.dubbo.iface.IUserInfo;
 import com.zhang.dubbo.service.UserInfoService;
+import com.zhang.dubbo.utils.Slf4jLogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,10 @@ public class UserInfoServer implements IUserInfo {
     private UserInfoService userInfoService;
 
     public UserInfo getUserInfo(String id) {
-        return userInfoService.getUserInfo(id);
+        Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理开始");
+        UserInfo userInfo = userInfoService.getUserInfo(id);
+        Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理完毕");
+        return userInfo;
     }
 
     public void saveUserInfo(UserInfo userInfo) {

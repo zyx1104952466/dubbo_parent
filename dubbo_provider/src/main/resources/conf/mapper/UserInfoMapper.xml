@@ -24,7 +24,7 @@
       SELECT * FROM user_info
     </select>
     <select id="getById" parameterType="String" resultMap="resultMapUserInfo">
-        SELECT * FROM user_info
+        SELECT id, name FROM user_info
         WHERE id=#{value}
     </select>
 
