@@ -21,7 +21,7 @@ public class UserInfoActionTest {
         UserInfo userInfo = new UserInfo();
         userInfo.setId("1");
         userInfo.setName("zhangyux");
-        userInfoController.saveUserInfo(userInfo);
+        userInfoController.save(userInfo);
         try {
             System.in.read();
         } catch (IOException e) {

@@ -9,7 +9,7 @@ import com.zhang.dubbo.entity.UserInfo;
  * @Date 2019/5/24 9:32
  * @Version 1.0
  **/
-public interface IUserInfo {
+public interface IUserInfoServer {
 
     public UserInfo getUserInfo(String id);
 

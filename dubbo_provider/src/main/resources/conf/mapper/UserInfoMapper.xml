@@ -3,7 +3,7 @@
 <mapper namespace="com.zhang.dubbo.mapper.IUserInfoMapper">
 
     <parameterMap type="com.zhang.dubbo.entity.UserInfo" id="parameterMapUserInfo">
-        <parameter property="id"/>
+        <!--<parameter property="id"/>-->
         <parameter property="name"/>
     </parameterMap>
 
@@ -14,7 +14,7 @@
 
     <insert id="insertUserInfo" parameterMap="parameterMapUserInfo">
         INSERT INTO user_info(id,name)
-        VALUES(?,?)
+        VALUES((select nextval('TestSeq')),?)
     </insert>
 
     <select id="countAll" resultType="int">

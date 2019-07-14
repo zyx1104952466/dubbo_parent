@@ -1,7 +1,9 @@
 package com.zhang.dubbo.service;
 
+import com.alibaba.fastjson.JSON;
 import com.zhang.dubbo.dao.IUserInfoDao;
 import com.zhang.dubbo.entity.UserInfo;
+import com.zhang.dubbo.utils.Slf4jLogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -21,6 +23,7 @@ public class UserInfoService {
     }
 
     public void saveUserInfo(UserInfo userInfo) {
+        Slf4jLogUtils.MSG.info(JSON.toJSONString(userInfo));
         userInfoDao.insertUserInfo(userInfo);
     }
 }

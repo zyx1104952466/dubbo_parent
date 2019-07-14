@@ -1,13 +1,16 @@
 package com.zhang.dubbo.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.fastjson.JSON;
 import com.zhang.dubbo.entity.UserInfo;
-import com.zhang.dubbo.iface.IUserInfo;
+import com.zhang.dubbo.iface.IUserInfoServer;
 import com.zhang.dubbo.utils.Slf4jLogUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -18,24 +21,24 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Version 1.0
  **/
 @RestController
+@RequestMapping("/userInfo")
 public class UserInfoController {
 
-    private static AtomicInteger acount = new AtomicInteger(0);
-
     @Reference
-    IUserInfo userInfo;
+    IUserInfoServer userInfoServer;
 
-    @RequestMapping(value = "getUserInfo")
-    public UserInfo getUserInfo(String id) {
+    @RequestMapping(value = "get")
+    public UserInfo get(String id) {
         Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理开始");
-        UserInfo bean = userInfo.getUserInfo(id);
+        UserInfo bean = userInfoServer.getUserInfo(id);
         Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理结束");
         return  bean;
     }
 
-    @RequestMapping(value = "saveUserInfo")
-    public void saveUserInfo(UserInfo bean) {
+    @RequestMapping(value = "save")
+    public void save(@RequestBody UserInfo userInfo) {
         Slf4jLogUtils.MSG.info("当前请求：" + Thread.currentThread().getName());
-        userInfo.saveUserInfo(bean);
+        Slf4jLogUtils.MSG.info(JSON.toJSONString(userInfo));
+        userInfoServer.saveUserInfo(userInfo);
     }
 }

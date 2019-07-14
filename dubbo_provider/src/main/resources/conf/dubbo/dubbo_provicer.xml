@@ -7,12 +7,15 @@
 		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- dubbo配置 -->
-    <dubbo:application name="${application.name}" owner="zhangyux" logger="slf4j"/>
+    <dubbo:application name="${application.name}" owner="${application.owner}" logger="${application.logger}"/>
+    <!--配置注册中心-->
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
-    <dubbo:protocol name="dubbo" port="20882"/>
-    <dubbo:provider timeout="60000" threadpool="fixed" threads="20" accepts="40"/>
+    <!--配置协议-->
+    <dubbo:protocol name="dubbo" port="20882" dispatcher="message" threadpool="fixed" threads="500" accepts="1000"/>
+    <!--配置超时-->
+    <dubbo:provider timeout="60000"/>
 
     <!-- dubbo服务发布 -->
-    <dubbo:service interface="com.zhang.dubbo.iface.IUserInfo" ref="userInfoServer"/>
+    <dubbo:service interface="com.zhang.dubbo.iface.IUserInfoServer" ref="userInfoServer"/>
 
 </beans>

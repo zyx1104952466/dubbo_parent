@@ -13,10 +13,41 @@ import java.util.Map;
  * @Version 1.0
  **/
 public interface IUserInfoDao{
+
+    /**
+     * 统计总笔数
+     * @return
+     */
     public int countAll();
+
+    /**
+     * 根据主键获取对象
+     * @param id
+     * @return
+     */
     public UserInfo getById(String id);
+
+    /**
+     * 插入单条数据
+     * @param userInfo
+     */
     public void insertUserInfo(UserInfo userInfo);
+
+    /**
+     * 获取所有明细
+     * @return
+     */
     public List<UserInfo> getAllUserInfo();
+
+    /**
+     * 根据主键删除明细
+     * @param id
+     */
     public void deleteUserInfo(String id);
+
+    /**
+     * 更新明细
+     * @param map
+     */
     public void updateUserInfo(Map<String,Object> map);
 }
