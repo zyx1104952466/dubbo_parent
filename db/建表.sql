@@ -63,12 +63,4 @@ END
 $ 
 DELIMITER ; 
 
-DROP TABLE IF EXISTS user_info; 
-create table user_info
-(
-  id   varchar(10) not null
-  comment '用户编号'
-    primary key,
-  name varchar(20) not null
-  comment '名称'
-);
+DROP TABLE IF EXISTS user_info;

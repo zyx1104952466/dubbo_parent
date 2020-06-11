@@ -11,7 +11,7 @@ import com.zhang.dubbo.entity.UserInfo;
  **/
 public interface IUserInfoServer {
 
-    public UserInfo getUserInfo(String id);
+    public UserInfo getUserInfo(Integer id);
 
     public void saveUserInfo(UserInfo userInfo);
 }

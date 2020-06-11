@@ -26,23 +26,23 @@ public class UserInfoDaoImpl implements IUserInfoDao {
         return userInfoMapper.countAll();
     }
 
-    public UserInfo getById(String id) {
-        return userInfoMapper.getById(id);
+    public UserInfo selectByPrimaryKey(Integer id) {
+        return userInfoMapper.selectByPrimaryKey(id);
     }
 
-    public void insertUserInfo(UserInfo userInfo) {
-        userInfoMapper.insertUserInfo(userInfo);
+    public void insert(UserInfo userInfo) {
+        userInfoMapper.insert(userInfo);
     }
 
     public List<UserInfo> getAllUserInfo() {
         return userInfoMapper.getAllUserInfo();
     }
 
-    public void deleteUserInfo(String id) {
-        userInfoMapper.deleteUserInfo(id);
+    public void deleteByPrimaryKey(Integer id) {
+        userInfoMapper.deleteByPrimaryKey(id);
     }
 
-    public void updateUserInfo(Map<String, Object> map) {
-        userInfoMapper.updateUserInfo(map);
+    public void updateUserInfo(UserInfo userInfo) {
+        userInfoMapper.updateUserInfo(userInfo);
     }
 }

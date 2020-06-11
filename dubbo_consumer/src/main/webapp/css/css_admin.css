@@ -1,0 +1,140 @@
+u {
+    text-decoration: none;
+    white-space: nowrap;
+}
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-family: Tahoma,Verdana,Arial,����;
+    font-size: 12px;
+    margin: 0;
+}
+.inputstyle {
+    border: 1px solid #7F9DB9;
+    color: #808080;
+    font-size: 14px;
+    height: 14px;
+    margin: 0;
+    padding: 5px;
+    width: 190px;
+    
+}
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #097FD1;
+}
+a:link, a:visited, a:active {
+    color: #097FD1;
+    text-decoration: none;
+}
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+a.b:link, a.b:visited, a.b:active {
+    color: #666666;
+    text-decoration: none;
+}
+a.b:hover {
+    color: #097FD1;
+    text-decoration: none;
+}
+#login {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+#login h4 {
+    background: url(../images/icons_admin.gif) repeat-x scroll 0 0 transparent; 
+    color:#054cb0; 
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 3px 0 0 10px;
+    margin:0;
+ 
+}
+.admin_query_left{
+	width:20%; 
+	font-size:12px;  
+	text-align:right;
+	text-align:right;
+	padding:0 10px 0 0;
+	background-color:#e9f8ff;
+	height:30px; 
+	line-height:30px; 
+	font-weight:700;  
+	color:#3372cf;
+}
+
+.admin_query_right{
+	width:30%; 
+	font-size:12px;  
+	text-align:left;
+	padding:0 0 0 0px; 
+	height:30px; 
+	line-height:30px; 
+	background-color:#FFFFFF; 
+	display:inline; 
+	color:#3372cf;
+	float:left;
+}
+
+.admin_query_left01{
+	width:10%; 
+	font-size:12px;  
+	text-align:right;
+	text-align:right;
+	padding:0 10px 0 0;
+	background-color:#FFFFFF;
+	height:30px; 
+	line-height:30px; 
+}
+.admin_query_right01{
+	width:20%; 
+	font-size:12px;  
+	height:30px; 
+	background-color:#FFFFFF; 
+	color:#3372cf;
+}
+
+.admin_query_left02{
+	width:10%; 
+	font-size:12px;  
+	text-align:right;
+	text-align:right;
+	padding:0 10px 0 0;
+	background-color:#FFFFFF;
+	height:30px; 
+	line-height:30px; 
+}
+
+.admin_query_right02{
+	width:60%; 
+	font-size:12px;  
+	height:30px; 
+	background-color:#FFFFFF; 
+	color:#3372cf;
+}
+
+
+
+.admin_query_left11{
+	width:10%; 
+	font-size:12px;  
+	text-align:right;
+	text-align:right;
+	padding:0 10px 0 0;
+	background-color:#FFFFFF;
+	height:30px; 
+	line-height:30px; 
+}
+.admin_query_right11{
+	width:90%; 
+	font-size:12px;  
+	height:30px; 
+	background-color:#FFFFFF; 
+	color:#3372cf;
+}

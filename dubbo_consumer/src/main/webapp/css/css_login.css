@@ -1,0 +1,796 @@
+<!-- 
+	body{font-family:宋体; font-size:12px; padding:0px; margin:0px;} 
+	.showWindow:hover{color:#FF0000} 
+	.win_bg{background:#000000; opacity:0.2; filter:alpha(opacity=20); position:absolute; left:0px; top:0px;width:100%;height:1000px; z-index:998;} 
+	.win_bgIE6{background:#000000; opacity:0.2; filter:alpha(opacity=20); position:absolute; left:0px; top:0px;width:1400px;height:1000px; z-index:998;} 
+	.winTitle{background:#9DACBF; height:20px; line-height:20px} 
+	.winTitle .title_left{font-weight:bold; color:#FFF; padding-left:5px; float:left} 
+	.winTitle .title_right{float:right} 
+	.winTitle .title_right a{color:#000; text-decoration:none} 
+	.winTitle .title_right a:hover{text-decoration:underline; color:#FF0000} 
+	.winContent{padding:5px;} 
+--> 
+u {
+    text-decoration: none;
+    white-space: nowrap;
+}
+body {    
+    font-family: Tahoma,Verdana,Arial,宋体;
+    font-size: 12px;
+    margin: 0;
+}
+.inputstyle {
+    border: 1px solid #7F9DB9;
+    color: #808080;
+    font-size: 14px;
+    height: 14px;
+    margin: 0;
+    padding: 5px;
+    width: 190px;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+a.b:link, a.b:visited, a.b:active {
+    color: #666666;
+    text-decoration: none;
+}
+a.b:hover {
+    color: #097FD1;
+    text-decoration: none;
+}
+#divWin {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divWin h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divWin h4 .btn_close, #divWin h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divWin h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divWin h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divWin ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divWin ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divWin ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divWin ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divWin .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divWin #verifytip {
+    color: #808080;
+}
+#divWin em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divWin p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divWin label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divWin .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divWin #verifytip {
+    padding: 0 0 7px;
+}
+#divWin #verifyshow {
+    padding: 0;
+}
+#divWin .low_login {
+    margin-top: 0;
+}
+.login_button {
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 10px 88px;
+}
+.loginbtn {
+    background: url(../images/icons.gif) no-repeat scroll 0 -160px transparent;
+    border: 0 none;
+    color: #204497;
+    cursor: pointer;
+    height: 27px;
+    width: 68px;
+}
+.btn {
+    background: url(../images/icons.gif) no-repeat scroll -102px -130px transparent;
+    border: 0 none;
+    color: #2473A2;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    width: 93px;
+	margin-right:16px;
+	_margin-right:12px;
+	_margin-left:4px;
+}
+.btn1 {
+    background: url(../images/icons.gif) no-repeat scroll 0px -130px transparent;
+    border: 0 none;
+    color: #2473A2;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    width: 93px;
+	margin-right:16px;
+	_margin-right:12px;
+	_margin-left:4px;
+}
+.loginbtn_g {
+    background: url(../images/icons.gif) no-repeat scroll 0 -30px transparent;
+    border: 0 none;
+    color: #2473A2;
+    cursor: pointer;
+    font-weight: bold;
+    height: 33px;
+    width: 126px;
+}
+.btnlong {
+    background: url(../images/icons.gif) no-repeat scroll 0 -143px transparent;
+    border: 0 none;
+    color: #2473A2;
+    cursor: pointer;
+    font-weight: bold;
+    height: 31px;
+    width: 125px;
+}
+.lineright {
+    height: 18px;
+    line-height: 18px;
+    margin: 0 8px 0 0;
+    text-align: right;
+    
+}
+.linemid {
+    color: gray;
+    padding: 10px 8px 0 30px;
+}
+.linecenter {
+    padding: 10px 8px 0 0;
+    text-align: center;
+}
+.hi_style {
+    height: 200px;
+}
+.list_name {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: left;
+    width: 260px;
+}
+#lowlogin_tips {
+    color: red;
+    padding-right: 10px;
+}
+.err_m {
+    color: #FF0000;
+    display: none;
+    padding-left: 26px !important;
+}
+.main {
+    background-color: #FFFFFF;
+    height:auto;
+    
+}
+.main1 {
+    background-color: #FFFFFF;
+    height:auto;
+    
+}
+
+
+
+<!--                     ldw add                              -->
+#divPayWin {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divPayWin h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divPayWin h4 .btn_close, #divPayWin h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divPayWin h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divPayWin h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divPayWin ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divPayWin ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divPayWin ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divPayWin ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divPayWin .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divPayWin #verifytip {
+    color: #808080;
+}
+#divPayWin em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divPayWin p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divPayWin label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divPayWin .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divPayWin #verifytip {
+    padding: 0 0 7px;
+}
+#divPayWin #verifyshow {
+    padding: 0;
+}
+#divPayWin .low_login {
+    margin-top: 0;
+}
+
+#divPayResultWin {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divPayResultWin h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divPayResultWin h4 .btn_close, #divPayResultWin h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divPayResultWin h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divPayResultWin h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divPayResultWin ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divPayResultWin ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divPayResultWin ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divPayResultWin ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divPayResultWin .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divPayResultWin #verifytip {
+    color: #808080;
+}
+#divPayResultWin em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divPayResultWin p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divPayResultWin label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divPayResultWin .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divPayResultWin #verifytip {
+    padding: 0 0 7px;
+}
+#divPayResultWin #verifyshow {
+    padding: 0;
+}
+#divPayResultWin .low_login {
+    margin-top: 0;
+}
+#divPayResultWinBank {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divPayResultWinBank h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divPayResultWinBank h4 .btn_close, #divPayResultWinBank h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divPayResultWinBank h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divPayResultWinBank h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divPayResultWinBank ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divPayResultWinBank ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divPayResultWinBank ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divPayResultWinBank ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divPayResultWinBank .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divPayResultWinBank #verifytip {
+    color: #808080;
+}
+#divPayResultWinBank em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divPayResultWinBank p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divPayResultWinBank label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divPayResultWinBank .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divPayResultWinBank #verifytip {
+    padding: 0 0 7px;
+}
+#divPayResultWinBank #verifyshow {
+    padding: 0;
+}
+#divPayResultWinBank .low_login {
+    margin-top: 0;
+}
+
+
+
+#divPayResultWinAgent {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divPayResultWinAgent h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divPayResultWinAgent h4 .btn_close, #divPayResultWinAgent h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divPayResultWinAgent h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divPayResultWinAgent h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divPayResultWinAgent ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divPayResultWinAgent ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divPayResultWinAgent ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divPayResultWinAgent ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divPayResultWinAgent .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divPayResultWinAgent #verifytip {
+    color: #808080;
+}
+#divPayResultWinAgent em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divPayResultWinAgent p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divPayResultWinAgent label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divPayResultWinAgent .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divPayResultWinAgent #verifytip {
+    padding: 0 0 7px;
+}
+#divPayResultWinAgent #verifyshow {
+    padding: 0;
+}
+#divPayResultWinAgent .low_login {
+    margin-top: 0;
+}
+#divAct {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divAct h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divAct h4 .btn_close, #divAct h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divAct h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divAct h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divAct ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divAct ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divAct ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divAct ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divAct .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divAct #verifytip {
+    color: #808080;
+}
+#divAct em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divAct p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divAct label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divAct .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divAct #verifytip {
+    padding: 0 0 7px;
+}
+#divAct #verifyshow {
+    padding: 0;
+}
+#divAct .low_login {
+    margin-top: 0;
+}
+
+#divPayResultWinMobile {
+    border: 1px solid #99C2EE;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 5px;
+    width: 370px;
+}
+#divPayResultWinMobile h4 {
+    background: url(../images/icons.gif) no-repeat scroll 0 0 transparent; 
+    border-bottom: 1px solid #438ECE;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    padding: 7px 0 0 30px;
+    line-height:21px;
+}
+#divPayResultWinMobile h4 .btn_close, #divPayResultWinMobile h4 .btn_help {
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin-right: 5px;
+    width: 17px;
+}
+#divPayResultWinMobile h4 .btn_close {
+    background: url(../images/icons.gif) no-repeat scroll 0 -284px transparent;
+    margin-top: -1px;
+}
+#divPayResultWinMobile h4 .btn_help {
+    background: url(../images/icons.gif) no-repeat scroll 0 -308px transparent;
+}
+#divPayResultWinMobile ul {
+    margin: 0;
+    padding: 12px 0 11px;
+}
+#divPayResultWinMobile ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+#divPayResultWinMobile ul li span {
+    float: left;
+    padding-right: 5px;
+   height:30px;
+   line-height:30px;
+    text-align: right;
+    width: 83px;
+}
+#divPayResultWinMobile ul li span {
+    color: #535353;
+    font-size: 12px;
+}
+#divPayResultWinMobile .about {
+    clear: both;
+    margin-left: 110px;
+    padding-top: 3px;
+}
+#divPayResultWinMobile #verifytip {
+    color: #808080;
+}
+#divPayResultWinMobile em {
+    color: #FF0000;
+    font-style: normal;
+    padding: 0 3px;
+}
+#divPayResultWinMobile p {
+    color: #535353;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 15px 12px 32px;
+}
+#divPayResultWinMobile label {
+    color: #535353;
+    height:30px;
+    line-height:30px;
+    padding: 0 0 0 8px;
+    position: absolute;
+}
+#divPayResultWinMobile .error {
+    background: url(../images/icons.gif) no-repeat scroll 0 -396px transparent;
+    line-height: 20px;
+    margin: 15px 30px;
+    padding: 31px 0 30px 65px;
+}
+#divPayResultWinMobile #verifytip {
+    padding: 0 0 7px;
+}
+#divPayResultWinMobile #verifyshow {
+    padding: 0;
+}
+#divPayResultWinMobile .low_login {
+    margin-top: 0;
+}

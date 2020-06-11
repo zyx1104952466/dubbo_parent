@@ -1,0 +1,56 @@
+/*三种按钮a button input*/ 
+.buttonbox a{background:url(../../images/button/button1.gif) 0px 0px no-repeat; 
+    border:0; height:21px; width:75px;
+    display:-moz-inline-box;display:inline-block;font-size:13px; text-decoration: none;
+    text-align:center;line-height:21px;}
+.buttonbox a:hover  {background-position:0px -21px; } /*经过时的背景位置*/ 
+.buttonbox a:active {background:url(../../images/button/a_active.jpg) 0 0px;}/*点击后的背景位置*/ 
+
+.buttonbox input,.box button {/*同时定义input和button两个的属性*/
+	width:138px; height:41px;
+	border:0;/*边框属性必加，否则按钮会带黑色边框*/
+	text-align:center;
+	line-height:41px;/*文字行高 必须和高度相同，文字才能垂直居中*/
+	background:url(../../images/button/buttonbg.gif);
+	font-size: 18px;
+	color:#FFF;
+	font-weight:bold;
+	cursor:pointer;/*鼠标指到按钮上时的状态*/
+ }
+.buttonbox2 input { 
+	height:59px; font-size:28px; 
+	font-family:Vernada; padding:0 30px; 
+	color:#fff; overflow:visible; border:1px solid #000; 
+	background:url(../../images/button/buttonbg.gif);
+}
+
+/*select的边框必须用div*/ 
+.selectbox div {
+        border:1px solid #c00;
+        width:123px;
+        height:18px;
+        clip:rect(0px,18px,22px,0px);
+        overflow:hidden;
+}
+.selectbox select {
+        position:relative;
+        left:-2px;
+        top:-2px;
+        font-size:12px;
+        width:125px;
+        line-height:18px;border:0px;
+        color:#0000CC;/*字体蓝色*/
+}
+.selectbox optgroup {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    color:#000000;/*字体黑色*/
+    background-color: #FFFFFF;
+}
+
+
+
+
+

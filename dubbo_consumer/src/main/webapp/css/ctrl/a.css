@@ -1,0 +1,35 @@
+/*是超级链接的初始状态*/
+a:active {
+	color: #215DC6;
+	text-decoration: none;
+}
+/*是鼠标点击时*/
+a:link {
+	color: #215DC6;
+	text-decoration: none;
+}
+/*是访问过后的情况*/
+a:visited {
+	color: #215DC6;
+	text-decoration: none;
+}
+/*是把鼠标放上去时的状况 */
+a:hover {
+	font-size:12px;color:#FF0000;text-decoration : underline; 
+	position : relative; top : 1px; left : 1px;
+}
+
+/*这是网页统一显示的样式 可以拷贝下面的a_general a_press风格*/
+.a_show a:hover {
+}
+
+.a_general a:hover {
+	font-size:12px;
+	color: darkorenge;/*#428EFF*/
+	text-decoration: underline;
+}
+
+.a_press a:hover {
+	font-size:12px;color:darkorenge;text-decoration : underline; 
+	position : relative; top : 1px; left : 1px;
+}  

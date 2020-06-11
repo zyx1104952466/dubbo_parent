@@ -20,14 +20,14 @@ public class UserInfoServer implements IUserInfoServer {
     @Autowired
     private UserInfoService userInfoService;
 
-    public UserInfo getUserInfo(String id) {
+    public UserInfo getUserInfo(Integer id) {
         Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理开始");
-        UserInfo userInfo = userInfoService.getUserInfo(id);
+        UserInfo userInfo = userInfoService.selectByPrimaryKey(id);
         Slf4jLogUtils.MSG.info("线程：" + Thread.currentThread().getName() + "处理完毕");
         return userInfo;
     }
 
     public void saveUserInfo(UserInfo userInfo) {
-        userInfoService.saveUserInfo(userInfo);
+        userInfoService.insert(userInfo);
     }
 }

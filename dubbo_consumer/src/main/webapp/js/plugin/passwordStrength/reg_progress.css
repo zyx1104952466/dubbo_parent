@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("global.css");
+@import url("link.css");
+@import url("layout.css");
+#regbox{ width:960px; height:240px; background:url(../images/reg_bg.gif) no-repeat}
+.r_single{ width:290px; float:left; padding-top:65px; display:inline}
+.r_single h1{ font-size:20px; font-family:Microsoft YaHei,"黑体"; font-weight:normal; background:url(../images/sprite_2011121.gif) no-repeat;padding:0 0 0 45px; line-height:32px;}
+.r_single p{ font-size:12px; color:#666; line-height:18px;}
+.b1 h1{ background-position: -915px -96px;}
+.b2 h1{ background-position: -920px -140px;}
+.b2{ margin-left:25px;}
+.b3{ margin-left:52px;}
+.b1 p,.b2 p{ margin:10px 0 0 46px; }
+.r_single a{  background:url(../images/btn_n.gif) no-repeat top right; padding-right:25px; height:36px; float:left; font-size:16px; font-weight:bold; line-height:36px; color:#fff;}
+.r_single a span{ display:block; background:url(../images/btn_n.gif) no-repeat left bottom; height:36px; padding-left:25px; float:left}
+.b1 a{ margin:18px 0 0 47px;}
+.b2 a{ margin:36px 0 0 47px;}
+.b3 a{ margin:60px 0 0 0px;}
+.r_single a:hover{background:url(../images/btn_hover.gif) no-repeat top right; padding-right:25px; height:36px; float:left; font-size:16px; font-weight:bold; line-height:36px; color:#fff; display:inline}
+.r_single a:hover span{ display:block; background:url(../images/btn_hover.gif) no-repeat left bottom; height:36px; padding-left:25px;}
+
+.step{ width:960px; height:30px; overflow:hidden;line-height:30px; background:url(../images/step.gif) no-repeat; margin-bottom:20px}
+#step_one{ background-position: 0 0}
+#step_two{ background-position:0 -30px}
+#step_three{ background-position:00 -60px;}
+.slenth{ width:320px; float:left; display:inline; text-align:center}
+#step_one .step_1,#step_two .step_2,#step_three .step_3{ font-weight:bold; color:#c00;}
+.regform{ margin-top:20px;}
+.s_item{ width:730px; padding-left:230px; clear:both; font-size:14px; float:left; margin:3px 0}
+.s_item:hover{ background-color:#f9f9f9; -webkit-transition-property:background-color; -moz-transition-property:background-color;}
+.s_item label{ width:230px; text-align:right; float:left; margin-left:-230px; line-height:24px;}
+.s_item label span{ color:#f00;}
+.s_item .b_input,.s_item .b_input input,.s_item .b_input select{ float:left}
+.b_input span{ float:left; font-size:12px; line-height:25px;}
+.b_input .radiobox span{ padding-right:10px}
+.s_item .b_input input.r_input{ width:200px; border-width:1px; border-color:#aaa #ddd #ddd #aaa; border-radius:2px; border-style:solid; padding:3px;}
+.b_input select{ width:200px; border:1px solid #9c9c9c; padding:2px 1px; height:24px;}
+.b_input select.area{ width:80px; margin-right:5px;}
+#imvalue{ clear:both; margin-top:5px;}
+.s_item .b_input span.c_hint{ float:left; width:16px; height:25px; background:url(../images/checked.gif) no-repeat 10px 50%; padding-left:10px}
+.s_item .b_input img.proce_img{ float:left; padding-left:10px; padding-top:5px;}
+/*.s_item .b_input span{ float:left; line-height:24px;}*/
+.s_item .b_input.b_phone span{ margin:0 5px;}
+.s_item i{ font-style:normal;}
+.r_radio{ margin:5px 5px 0 0}
+.radiobox{ width:204px; float:left}
+.radiobox span img{ margin:3px 0 0 0}
+.s_item .b_input input.code{ width:60px;}
+.s_item .b_input #code_img{ float:left; margin:0 5px;}
+.s_item .b_input a.l_change{ line-height:24px; float:left}
+.s_item .b_input input:focus,.r_active fieldset input:focus{ padding:3px; outline:none}
+.s_item .b_input .r_explain{ clear:both; font-size:12px; color:#999; line-height:18px;}
+/*.r_hint{ height:22px; line-height:22px; margin-left:10px; padding:0 5px; font-size:12px; color:#f60; float:left; display:inline}*/
+.r_explain{width:100%; height:25px; overflow:hidden}
+.r_explain a,.r_explain span{ float:left}
+.codeput{ width:50px;}
+
+.r_hint span{padding-left:16px; background:url(../images/btn_w.gif) no-repeat 0 center}
+#r_submit{ width:181px; height:33px; border:0; background:url(../images/sprite_2011121.gif) no-repeat 0 -48px; cursor:pointer; margin:10px 0 0 0}
+#r_policy{ width:600px; height:100px; overflow:auto; font-size:12px; border:1px solid #9c9c9c; padding:5px; margin:10px 0 0 0}
+.r_ptitle{ margin-top:10px;}
+
+.r_active{ width:900px; margin:10px auto}
+#r_a_title{ background:url(../images/sprite_2011121.gif) no-repeat -948px -203px; line-height:22px; padding-left:18px; font-weight:normal; margin:15px 0}
+.r_active fieldset{ margin:auto; line-height:24px; font-size:14px;}
+.r_active fieldset label{ float:left; width:100px; text-align:right; margin-left:-100px;}
+.r_active fieldset em{ font-size:16px; color:#c00;}
+.r_active fieldset input{ border-width:1px; border-style:solid; border-color:#aaa #ddd #ddd #aaa; border-radius:2px; padding:3px;}
+.r_active fieldset input.code_input{width:60px;}
+.r_a_single{ margin:10px 0; clear:both; float:left; width:680px; padding-left:220px;}
+.r_a_single img{ float:left; margin-left:5px; height:25px;}
+.r_a_single a{line-height:25px; float:left; display:inline; color:#07f;}
+#repost{ border:1px solid #ddd; background:#f8f8f8; width:400px;font-size:12px; padding:10px; line-height:18px; overflow:hidden}
+#repost input{ clear:both; height:27px; background:url(../images/bg_repeat.gif) repeat-x 0 0; border:1px solid #c0c1c3; padding:0 5px; line-height:25px; font-size:12px; cursor:pointer; margin-top:5px; float:left}
+#active_btn{ width:93px; height:33px; background:url(../images/sprite_2011121.gif) no-repeat -191px -48px; border:0; float:left}
+#email_btn{ width:181px;height:33px; background:url(../images/sprite_2011121.gif) no-repeat -293px -48px; border:0; clear:both}
+
+.pwdfind{ border-bottom:1px solid #ddd; width:900px; overflow:hidden; margin-bottom:10px;}
+.pwdfind h1{ font-size:20px; line-height:30px; float:left}
+.pwdfind a{ line-height:30px; color:#07f; padding-left:10px;}
+.pwdinput{ width:200px;}
+.pwd_findway{ width:500px; border:1px solid #ddd; background:#fff url(../images/pwd_find_way_bg.gif) repeat-x left bottom; float:left; clear:both; padding:20px 0 20px 50px; margin-bottom:10px;}
+.pwd_findway h3 {font-size: 14px;}
+.title-link {background: white;position: absolute;z-index: 99999;padding-left: 7px;font-size: 12px; font-weight:normal}
+.text-block {display: inline-block;vertical-align: 1px;border: 1px solid #76D142;background: #DCF869; padding:1px 10px;}
+.n-rbox-desc p{ line-height:30px;}
+.fn-row{ float:left; list-style:none}
+.fn-row li{ float:left; line-height:25px; padding-right:10px;}
+.fn-row li span{float:left; width:16px; height:25px; background:url(../images/step_pwd.gif) no-repeat 0 50%; line-height:25px; display:block; margin-right:5px;}
+.fn-row li span.step-no1{ background-position:0 50%;}
+.fn-row li span.step-no2{ background-position:-16px 50%;}
+#pwd_next{ width:106px; height:33px; background:url(../images/sprite_2011121.gif) no-repeat -708px -141px; border:0; cursor:pointer; clear:both; float:left; margin:10px 0 20px 50px;}
+#pwdhint{ float:left; padding-left:18px; margin-bottom:20px;}
+#pwdhint li{ float:left; clear:both; line-height:18px;}
+#pwdhint li a{ color:#07f; text-decoration:none}
+#pwdhint li a:hover{ color:#c00; text-decoration:underline}
+#pwdfind_finish{ width:958px; border:1px solid #f6c8b5; background:#fceee8; float:left; margin-bottom:30px;}
+.pwd_tips{ line-height:42px; padding-left:60px; margin:10px 0 10px 20px; font-size:20px; clear}
+.tgood{ background:url(../images/attention.gif) no-repeat 10px 50%}
+#pwdtip{ float:left; margin:0 0 10px 80px;}
+#pwdtip li{ float:left; font-size:14px; margin-right:10px;}
+#pwdtip li a,#r_a_title a{ color:#07f; text-decoration:none}
+#pwdtip li a:hover,#r_a_title a:hover{ color:#c00; text-decoration:underline}
+#checkcode{ width:60px; float:left}
+
+/*帐户激活成功页面*/
+#active-last{ margin:50px 0 40px 0;}
+#aclast-box{ width:465px; margin:auto; padding-left:60px;}
+#actidot{ width:60px; float:left; margin-left:-60px; display:inline; height:42px; background:url(../images/attention_wron.gif) no-repeat scroll 50% 50%;}
+#aclast-box h2{ font-size:28px; line-height:42px; color:#de3900; font-family:"黑体"}
+#aclast-box p{ color:#666; line-height:18px;}
+#aclast-box p em{ color:#d00000;}
+#actbtns input{ margin-top:15px; background:url(../images/actbtn-bg.gif) no-repeat; line-height:27px; text-align:center; border:0; cursor:pointer; margin-right:10px}
+#actbtns #act-ucenter{ width:124px; height:27px; background-position:0 0; color:#fff;}
+#actbtns #act-home{ width:68px; height:27px; background-position:0 -27px; color:#444}

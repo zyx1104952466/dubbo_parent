@@ -25,13 +25,13 @@ public interface IUserInfoDao{
      * @param id
      * @return
      */
-    public UserInfo getById(String id);
+    public UserInfo selectByPrimaryKey(Integer id);
 
     /**
      * 插入单条数据
      * @param userInfo
      */
-    public void insertUserInfo(UserInfo userInfo);
+    public void insert(UserInfo userInfo);
 
     /**
      * 获取所有明细
@@ -43,11 +43,11 @@ public interface IUserInfoDao{
      * 根据主键删除明细
      * @param id
      */
-    public void deleteUserInfo(String id);
+    public void deleteByPrimaryKey(Integer id);
 
     /**
      * 更新明细
-     * @param map
+     * @param userInfo
      */
-    public void updateUserInfo(Map<String,Object> map);
+    public void updateUserInfo(UserInfo userInfo);
 }

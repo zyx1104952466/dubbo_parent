@@ -19,8 +19,10 @@ public class UserInfoActionTest {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String("control-core.xml"));
         UserInfoController userInfoController = context.getBean(UserInfoController.class);
         UserInfo userInfo = new UserInfo();
-        userInfo.setId("1");
-        userInfo.setName("zhangyux");
+        userInfo.setUserCode("zhangyux");
+        userInfo.setUserName("张宇翔");
+        userInfo.setAge(28);
+        userInfo.setSex("男");
         userInfoController.save(userInfo);
         try {
             System.in.read();

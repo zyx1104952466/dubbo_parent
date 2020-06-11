@@ -9,9 +9,12 @@ import java.util.Map;
 @Service("userInfoMapper")
 public interface IUserInfoMapper {
     public int countAll();
-    public UserInfo getById(String id);
-    public void insertUserInfo(UserInfo userInfo);
+    public UserInfo selectByPrimaryKey(Integer id);
+    public void insert(UserInfo userInfo);
+    public void insertSelective(UserInfo userInfo);
     public List<UserInfo> getAllUserInfo();
-    public void deleteUserInfo(String id);
-    public void updateUserInfo(Map<String,Object> map);
+    public void deleteByPrimaryKey(Integer id);
+    public void updateUserInfo(UserInfo userInfo);
+    public void updateByPrimaryKey(UserInfo userInfo);
+    public void updateByPrimaryKeySelective(UserInfo userInfo);
 }

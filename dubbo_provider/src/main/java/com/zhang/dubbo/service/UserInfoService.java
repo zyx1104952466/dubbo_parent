@@ -18,12 +18,12 @@ public class UserInfoService {
     @Autowired
     IUserInfoDao userInfoDao;
 
-    public UserInfo getUserInfo(String id) {
-        return userInfoDao.getById(id);
+    public UserInfo selectByPrimaryKey(Integer id) {
+        return userInfoDao.selectByPrimaryKey(id);
     }
 
-    public void saveUserInfo(UserInfo userInfo) {
+    public void insert(UserInfo userInfo) {
         Slf4jLogUtils.MSG.info(JSON.toJSONString(userInfo));
-        userInfoDao.insertUserInfo(userInfo);
+        userInfoDao.insert(userInfo);
     }
 }

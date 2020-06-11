@@ -1,0 +1,24 @@
+#channel_menu {
+	CLEAR: both; DISPLAY: block; BACKGROUND: white; HEIGHT: 25px
+}
+#channel_menu A {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 85px; COLOR: #1e5494; LINE-HEIGHT: 27px; HEIGHT: 27px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#channel_menu A:hover {
+	BACKGROUND: #eaf3fd; COLOR: red
+}
+#channel_menu DIV {
+	BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; BACKGROUND: #eaf3fd; FLOAT: left; MARGIN: 2px 2px 0px; BORDER-LEFT: #aaaaaa 1px solid; BORDER-BOTTOM: 0px
+}
+#channel_menu DIV.active {
+	BACKGROUND: #6699cc
+}
+#channel_menu DIV.active A {
+	COLOR: white
+}
+#channel_menu DIV.active A:hover {
+	BACKGROUND: #6699cc; COLOR: white
+}
+#channel_menu DIV.firstItem {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: white; BORDER-LEFT: 0px; WIDTH: 50px; BORDER-BOTTOM: 0px
+}
